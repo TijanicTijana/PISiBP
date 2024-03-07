@@ -42,7 +42,7 @@ class Login
 
 	public function check_login($Korisnik_ID)
 	{
-		$query = "select Korisnik_ID from korisnik where Korisnik_ID = '$KorisnikID' limit 1";
+		$query = "select Korisnik_ID from korisnik where Korisnik_ID = '$Korisnik_ID' limit 1";
 		
 		// echo $query;
 		$DB=new Database();

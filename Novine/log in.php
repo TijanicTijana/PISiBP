@@ -56,12 +56,29 @@
 			float: right;
 			padding: 10px;
 			margin-top: -60px;
-			margin-right: 20px;
+			margin-right: 130px;
 			height: 40px;
 			border: none;
 			font-size: 15px;
 
 		}
+
+		#GoBack_button
+		{
+			background-color: #DAF7A6 ;
+			color: #0B5345;
+			width: 90px;
+			height: 40px;
+			text-align: center;
+			border-radius: 4px;
+			border: none;
+			float: right;
+			padding: 10px;
+			margin-top: -60px;
+			margin-right: 20px;
+			font-size: 15px;
+		}
+		
 
 
 		#login_bar
@@ -104,6 +121,9 @@
 	<body style="font-family: tahoma; background-color: #E8F6F3; ">
 		<div id="bar"> 
 	       	<div style="font-size: 40px; padding: 20px" >Novine</div> 
+		<div>
+	       		<input id = "GoBack_button" type="button" value="Go back" onClick="Javascript:window.location.href = 'http://localhost/kodovi/main for readers only.php'">	
+		</div>
 	       	<input id = "signup_button" type="button" value="Sign up" onClick="Javascript:window.location.href = 'http://localhost/kodovi/signup.php'">
 	    	
 	    </div>

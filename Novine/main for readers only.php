@@ -205,7 +205,7 @@
 				
 				<input id = "button" type="button" value="Sign up" onClick="Javascript:window.location.href = 'http://localhost/kodovi/chose your sign up.php'">
 
-				<input id = "button" type="button" value="Log in" onClick="Javascript:window.location.href = 'http://localhost/kodovi/log%20in.php'">
+				<input id = "button" type="button" value="Log in" onClick="Javascript:window.location.href = 'http://localhost/kodovi/chose your log in.php'">
 
 				<!--<div style="height: 60px; margin-left: 1100px; margin-top: -60px; color: white; font-size: 20px; text-align: center; padding: 20px; background-color: transparent; border:none; font-family: tahoma;">
 					<a style="color: white; " href="classes/log out.php">Log out</a>

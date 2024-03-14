@@ -42,7 +42,7 @@ class LoginUrednik
 
 	public function check_login($Novinar_ID)
 	{
-		$query = "select Urednik_ID from korisnik where Urednik_ID = '$Urednik_ID' limit 1";
+		$query = "select Urednik_ID from urednik where Urednik_ID = '$Urednik_ID' limit 1";
 		
 		// echo $query;
 		$DB=new Database();

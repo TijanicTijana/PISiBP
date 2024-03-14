@@ -62,7 +62,7 @@
 	$Vest_Tekst3= "";
 	$Vest_Kategorija= "";
 	$Vest_Tag= "";	
-	$Vest_Datum= "";
+	// $Vest_Datum= "";
 
 	
 	if($_SERVER['REQUEST_METHOD'] == 'POST')
@@ -96,7 +96,7 @@
 		$Vest_Tekst3= $_POST['Vest_Tekst3'];
 		$Vest_Kategorija= $_POST['Vest_Kategorija'];
 		$Vest_Tag= $_POST['Vest_Tag'];	
-		$Vest_Datum= date("d.m.Y");
+		// $Vest_Datum= date("d.m.Y");
 
 	}
 

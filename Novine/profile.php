@@ -6,8 +6,11 @@
 	include("classes/connect.php");
 	include("classes/log in.php");
 	include("classes/user.php");
+	include("classes/write the news");
+	// include("post pojedinacan.php");
 	// include("classes/log out.php");
 // unset($_SESSION['Korisnik_ID']);
+
 	if(isset($_SESSION['Korisnik_ID']) && is_numeric($_SESSION['Korisnik_ID']))
 	{
 		$Korisnik_ID = $_SESSION['Korisnik_ID'];
@@ -35,10 +38,28 @@
 	}
 	else
 	{
-		header("Location: Chose your log in.php.php");
+		header("Location: Chose your log in.php");
 		die;
 	}
-	// print_r($user_data);
+
+/* kreiranje postova --ne treba mi
+	if($_SERVER['REQUEST_METHOD'] == "POST")
+	{
+		$povuciVest = new News();
+		$povuciVest_sadrzaj = $povuciVest->get_data();
+
+		if($povuciVest_sadrzaj=="")
+		{
+			header("Location: profile.php");
+			die;	
+		}
+	}
+*/
+	//citanje vesti
+	$post = new Write();
+	$posts = $post->get_vest(); //vraca vrednost query-ja select * from vest ordered by Vest_Datum desc
+
+
 ?>
 
 <!DOCTYPE html>
@@ -242,68 +263,32 @@
 						<!--<textarea placeholder="Make your post"></textarea>
 						<input id="post_button"type="submit" value="Post">
 						<br>-->
+					
 					<div id="post_bar">
 						<!--Post 1 ****************************************************************  -->
-						<div id="post">
-							<div>
-								<img src="logo.png" style="width: 75px; margin-right: 4px;">
-							</div>
-							<div>
-								<div style="font-weight: bold; color: #0B5345">
-									Naslov <br>
-								</div>
-								sfeqrtd5t esrdtwts srtedwhw ssregt rsgetyhtr erstey <br><br>
+						<?php 
 
-								<a href="">Like</a>. 
-								<a href="">Dislajk</a> . 
-								<a href="">Comment</a> . 
-								<span style="color: #999">Broj lajkova</span> . 
-								<span style="color: #999">Broj dislajkova</span> . 
-								<span style="color: #999">Datum</span>
-							</div>
-						</div>
+
+							if($posts)
+							{
+								foreach ($posts as $ROW) {
+									# code...
+
+									include("post pojedinacan.php");
+								}
+							}
+
+							
+						?>
 						<!--Post 2 ************************************************************************-->
-						<div id="post">
-							<div>
-								<img src="logo.png" style="width: 75px; margin-right: 4px;">
-							</div>
-							<div>
-								<div style="font-weight: bold; color: #0B5345">
-									Naslov <br>
-								</div>
-								sfeqrtd5t esrdtwts srtedwhw ssregt rsgetyhtr erstey <br><br>
-
-								<a href="">Like</a>. 
-								<a href="">Dislajk</a> . 
-								<a href="">Comment</a> . 
-								<span style="color: #999">Broj lajkova</span> . 
-								<span style="color: #999">Broj dislajkova</span> . 
-								<span style="color: #999">Datum</span>
-							</div>
-						</div>
+						
 						<!--Post 3 *******************************************************************************-->
-						<div id="post">
-							<div>
-								<img src="logo.png" style="width: 75px; margin-right: 4px;">
-							</div>
-							<div>
-								<div style="font-weight: bold; color: #0B5345">
-									Naslov <br>
-								</div>
-								sfeqrtd5t esrdtwts srtedwhw ssregt rsgetyhtr erstey <br><br>
-
-								<a href="">Like</a>. 
-								<a href="">Dislajk</a> . 
-								<a href="">Comment</a> . 
-								<span style="color: #999">Broj lajkova</span> . 
-								<span style="color: #999">Broj dislajkova</span> . 
-								<span style="color: #999">Datum</span>
-							</div>
-						</div>
-
+						
 
 						
 					</div>
+
+
 
 				</div>
 

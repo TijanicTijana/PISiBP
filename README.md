@@ -1,7 +1,6 @@
 # Projektni zadatak iz Projektovanja informacionih sistema i baza podataka
-<br>
 Zadatak - Kreirati veb aplikaciju za e novine.
-<br>
+<br><br>
 Za izradu projekta korisceni su sledeci jezici: php, js, html i mysql<br>
 Za konekciju sa bazom koriscen je Xampp.<br>
 

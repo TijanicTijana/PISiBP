@@ -104,7 +104,7 @@
 	        <div>
 	       		<input id = "GoBack_button" type="button" value="Go back" onClick="Javascript:window.location.href = 'http://localhost/kodovi/main for readers only.php'">	
 			</div>
-	       	<input id = "signup_button" type="button" value="Log in" onClick="Javascript:window.location.href = 'http://localhost/kodovi/log%20in.php'">
+	       	<input id = "signup_button" type="button" value="Log in" onClick="Javascript:window.location.href = 'http://localhost/kodovi/chose your log in.php'">
 	    	
 	    </div>
 

@@ -1,5 +1,5 @@
-create database if not exists  Novine;
-use Novine;
+create database if not exists  novine;
+use novine;
 
 -- Kreiranje tabele za korisnike
 CREATE TABLE korisnik (
@@ -100,7 +100,7 @@ CREATE TABLE vest (
     Vest_Naslov VARCHAR(100) NOT NULL,
     Vest_Tekst1 VARCHAR(10000) NOT NULL,
     Vest_Slika1 VARCHAR(100) ,
-    Vest_Podnaslov(100) ,
+    Vest_Podnaslov VARCHAR(100) ,
     Vest_Tekst2 VARCHAR(100) ,
     Vest_Slika2 VARCHAR(100) ,
     Vest_Tekst3 VARCHAR(100) ,
@@ -108,7 +108,7 @@ CREATE TABLE vest (
     Vest_Tagovi VARCHAR(255),
     Vest_Datum TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     Vest_BrojLajkova INT DEFAULT 0,
-    Vest_BrojDislajkova INT DEFAULT 0,
+    Vest_BrojDislajkova INT DEFAULT 0
     -- Urednik_ID INT,
     -- FOREIGN KEY (Urednik_ID) REFERENCES Urednik(Urednik_ID)
 );

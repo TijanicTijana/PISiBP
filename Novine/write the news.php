@@ -45,6 +45,61 @@
 	{
 		
 	}
+
+// take the data part
+
+	if($_SERVER['REQUEST_METHOD']=="POST")
+	{
+		
+	}
+
+	$Vest_Naslov= "";
+	$Vest_Tekst1= "";
+	$Vest_Slika1= "";
+	$Vest_Podnaslov= "";
+	$Vest_Tekst2= "";
+	$Vest_Slika2= "";
+	$Vest_Tekst3= "";
+	$Vest_Kategorija= "";
+	$Vest_Tag= "";	
+	$Vest_Datum= "";
+
+	
+	if($_SERVER['REQUEST_METHOD'] == 'POST')
+	{
+		$write = new Write();
+		$result = $signup->evaluate($_POST);
+
+		if ($result != "")
+		{
+			echo"<div style='text-align: center; font-size:12px; color:white; background-color:grey;'>";
+			echo "Doslo je do greske <br>";
+			echo $result;
+			echo"</div>";
+		}
+		else
+		{
+// *********************************************************************************************************************************************************************************************************************************************
+			header("Location: Chose your log in.php");
+			die;
+		}
+
+
+
+
+		$Vest_Naslov= $_POST['Vest_Naslov'];
+		$Vest_Tekst1= $_POST['Vest_Tekst1'];
+		$Vest_Slika1= $_POST['Vest_Slika1'];
+		$Vest_Podnaslov= $_POST['Vest_Podnaslov'];
+		$Vest_Tekst2= $_POST['Vest_Tekst2'];
+		$Vest_Slika2= $_POST['Vest_Slika2'];
+		$Vest_Tekst3= $_POST['Vest_Tekst3'];
+		$Vest_Kategorija= $_POST['Vest_Kategorija'];
+		$Vest_Tag= $_POST['Vest_Tag'];	
+		$Vest_Datum= date("d.m.Y");
+
+	}
+
 ?>
 
 <!DOCTYPE html>
@@ -253,32 +308,29 @@
 			<div id="form" style="margin: auto; margin-top: 30px;">
 				<form method="post" action="write the news.php">
 		    	
-			    	<input value="" name="Vest_Naslov" type="text" id="text" placeholder="Naslov"><br><br>
-					<input value=""name="Tekst 1" type="text" id="text" placeholder="Tekst 1"><br><br>
-					<input value="" name="Slika 1" type="text" id="text" placeholder="Sika 1"><br><br>
+			    		<input value="<?php echo $Vest_Naslov?>" name="Vest_Naslov" type="text" id="text" placeholder="Naslov"><br><br>
+					<input value="<?php echo $Vest_Tekst1?>"name="Tekst 1" type="text" id="text" placeholder="Tekst 1"><br><br>
+					<input value="<?php echo $Vest_Slika1?>" name="Slika 1" type="text" id="text" placeholder="Sika 1"><br><br>
 			    	
-			    	<input value="" name="Podnaslov" type="text" id="text" placeholder="Podnaslov"><br><br>
-					<input name="Tekst 2" type="text" id="text" placeholder="Tekst 2"><br><br>
-					<input  name="Slika 2" type="text" id="text" placeholder="Slika 2"><br><br>
-					<input name="Tekst 3" type="text" id="text" placeholder="Tekst 3"><br><br><br>
+			    		<input value="<?php echo $Vest_Podnaslov?>" name="Podnaslov" type="text" id="text" placeholder="Podnaslov"><br><br>
+					<input value="<?php echo $Vest_Tekst2?>"name="Tekst 2" type="text" id="text" placeholder="Tekst 2"><br><br>
+					<input value="<?php echo $Vest_Slika2?>" name="Slika 2" type="text" id="text" placeholder="Slika 2"><br><br>
+					<input value="<?php echo $Vest_Tekst3?>" name="Tekst 3" type="text" id="text" placeholder="Tekst 3"><br><br><br>
 
 					<span style="font-weight: normal";> Kategorija:</span><br><br>
-			    	<select name="Novinar_Kategorija" id="text" style="width: 1000px;">
-			    		<!--<option><?php echo $Novinar_Kategorija?></option>-->
-			    		<option>Politika</option>
-			    		<option>Crna hronika</option> 
-			    		<option>Svet</option>
-			    		<option>Sport</option>
-			    		<option>Zabava</option>
-			    		<option>Kultura</option>
+			    		<select name="Vest_Kategorija" id="text" style="width: 1000px;">
+				    		<option><?php echo $Vest_Kategorija?></option>
+				    		<option>Politika</option>
+				    		<option>Crna hronika</option> 
+				    		<option>Svet</option>
+				    		<option>Sport</option>
+				    		<option>Zabava</option>
+				    		<option>Kultura</option>
 
-			    	</select><br><br>
-			    	<input value="" name="Tag" type="text" id="text" placeholder="Tag"><br><br>
+			    		</select><br><br>
+			    		<input value="Vest_Tag" name="Tag" type="text" id="text" placeholder="Tag"><br><br>
 					
 					<input type="submit" id="submit_button" value= "Submit" > <br><br><br>
-					<!-- <input type="submit" id="button" value= "Sign up as Novinar" > <br><br><br>
-					<input type="submit" id="button" value= "Sign up as Urednik" > <br><br><br>
-					-->
 				</form>
 			</div>
 		</div>

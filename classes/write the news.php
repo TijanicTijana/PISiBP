@@ -40,25 +40,51 @@
 
 		public function create_vest($data)
 		{
-			$Vest_Naslov= $data['Vest_Naslov'];
-			$Vest_Tekst1= $data['Vest_Tekst1'];
-			$Vest_Slika1= $data['Vest_Slika1'];
-			$Vest_Podnaslov= $data['Vest_Podnaslov'];
-			$Vest_Tekst2= $data['Vest_Tekst2'];
-			$Vest_Slika2= $data['Vest_Slika2'];
-			$Vest_Tekst3= $data['Vest_Tekst3'];
-			$Vest_Kategorija= $data['Vest_Kategorija'];
-			$Vest_Tag= $data['Vest_Tag'];	
-			// $Vest_Datum=$data("d.m.Y");
 
+			if(!empty($data['post']))
+			{
+				$Vest_Naslov= $data['Vest_Naslov'];
+				$Vest_Tekst1= $data['Vest_Tekst1'];
+				$Vest_Slika1= $data['Vest_Slika1'];
+				$Vest_Podnaslov= $data['Vest_Podnaslov'];
+				$Vest_Tekst2= $data['Vest_Tekst2'];
+				$Vest_Slika2= $data['Vest_Slika2'];
+				$Vest_Tekst3= $data['Vest_Tekst3'];
+				$Vest_Kategorija= $data['Vest_Kategorija'];
+				$Vest_Tag= $data['Vest_Tag'];	
+				// $Vest_Datum=$data("d.m.Y");
+	
+	
+				$query = "insert into vest( Vest_Naslov, Vest_Tekst1, Vest_Slika1, Vest_Podnaslov, Vest_Tekst2, Vest_Slika2, Vest_Tekst3, Vest_Kategorija, Vest_Tag) values('$Vest_Naslov', '$Vest_Tekst1', '$Vest_Slika1', '$Vest_Podnaslov', '$Vest_Tekst2', '$Vest_Slika2', '$Vest_Tekst3', '$Vest_Kategorija', '$Vest_Tag')";
+	
+				
+				// echo $query;
+				$DB=new Database();
+				$DB->save($query);
+			}
+			else
+			{
+				$this->error .= "Vest ne moze da bude prazna!<br>";
+			}
+			return $this->error;
+		}
+		public function get_vest()
+		{
 
-			$query = "insert into vest( Vest_Naslov, Vest_Tekst1, Vest_Slika1, Vest_Podnaslov, Vest_Tekst2, Vest_Slika2, Vest_Tekst3, Vest_Kategorija, Vest_Tag) values('$Vest_Naslov', '$Vest_Tekst1', '$Vest_Slika1', '$Vest_Podnaslov', '$Vest_Tekst2', '$Vest_Slika2', '$Vest_Tekst3', '$Vest_Kategorija', '$Vest_Tag')";
-
-			
+			$query = "select * from vest order by Vest_Datum desc";
+	
 			// echo $query;
 			$DB=new Database();
-			$DB->save($query);
+			$result = $DB->read($query);
 
+			if($result)
+			{
+				return $result;
+			}	
+			else
+			{
+				return false;
+			}
 		}
 
 	}

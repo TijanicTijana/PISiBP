@@ -49,10 +49,10 @@
 			$Vest_Tekst3= $data['Vest_Tekst3'];
 			$Vest_Kategorija= $data['Vest_Kategorija'];
 			$Vest_Tag= $data['Vest_Tag'];	
-			$Vest_Datum=$data("d.m.Y");
+			// $Vest_Datum=$data("d.m.Y");
 
 
-			$query = "insert into vest( Vest_Naslov, Vest_Tekst1, Vest_Slika1, Vest_Podnaslov, Vest_Tekst2, Vest_Slika2, Vest_Tekst3, Vest_Kategorija, Vest_Tag, Vest_Datum) values('$Vest_Naslov', '$Vest_Tekst1', '$Vest_Slika1', '$Vest_Podnaslov', '$Vest_Tekst2', '$Vest_Slika2', '$Vest_Tekst3', '$Vest_Kategorija', '$Vest_Tag', '$Vest_Datum')";
+			$query = "insert into vest( Vest_Naslov, Vest_Tekst1, Vest_Slika1, Vest_Podnaslov, Vest_Tekst2, Vest_Slika2, Vest_Tekst3, Vest_Kategorija, Vest_Tag) values('$Vest_Naslov', '$Vest_Tekst1', '$Vest_Slika1', '$Vest_Podnaslov', '$Vest_Tekst2', '$Vest_Slika2', '$Vest_Tekst3', '$Vest_Kategorija', '$Vest_Tag')";
 
 			
 			// echo $query;

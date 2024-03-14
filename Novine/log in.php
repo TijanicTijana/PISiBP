@@ -122,7 +122,7 @@
 		<div id="bar"> 
 	       	<div style="font-size: 40px; padding: 20px" >Novine</div> 
 		<div>
-	       		<input id = "GoBack_button" type="button" value="Go back" onClick="Javascript:window.location.href = 'http://localhost/kodovi/main for readers only.php'">	
+	       		<input id = "GoBack_button" type="button" value="Go back" onClick="Javascript:window.location.href = 'http://localhost/kodovi/chose your log in.php'">	
 		</div>
 	       	<input id = "signup_button" type="button" value="Sign up" onClick="Javascript:window.location.href = 'http://localhost/kodovi/chose your sign up.php'">
 	    	

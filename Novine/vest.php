@@ -191,7 +191,7 @@
 								</div>
 
 								<div>
-								<img src="Novak.png" style="width: 100%; margin-right: 4px;">
+								<img src="images/Novak.png" style="width: 100%; margin-right: 4px;">
 								</div>
 							</div>
 						</div>
@@ -208,7 +208,7 @@
 						</div>
 						<div id="post">
 							<div>
-								<img src="Novak sa zenom.png" style="width: 1000px;">
+								<img src="images/Novak i Kejti Peri.png" style="width: 1000px;">
 							</div>
 
 						</div>

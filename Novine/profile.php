@@ -21,7 +21,7 @@
 			$user_data = $user->get_data($Korisnik_ID);
 			if(!$user_data)
 			{
-				header("Location: Log in.php");
+				header("Location: Chose your log in.php");
 				die;
 			}
 
@@ -29,13 +29,13 @@
 		}
 		else
 		{
-			header("Location: Log in.php");
+			header("Location: Chose your log in.php");
 			die;
 		}
 	}
 	else
 	{
-		header("Location: Log in.php");
+		header("Location: Chose your log in.php.php");
 		die;
 	}
 	// print_r($user_data);
